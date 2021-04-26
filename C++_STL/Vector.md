@@ -4,11 +4,20 @@
 > 并且要在头文件的下面加上 **using namespace std;**,这样就可以在代码中使用**vector**了    
 
 ## 1.vector的定义
-> vector<*typename*> name;  
->- vector<*int*> name;  
->- vector<*char*> name;  
->- vector<*double*> name;
-
+```C
+ vector<*typename*> name;  
+ vector<*int*> name;  
+ vector<*char*> name;
+ vector<*int*> name(10); //声明一个初始大小为 **10** 的向量 
+ vector<*int*> name(10,1) //声明一个初始化大小为 **10** 值为 **1** 的向量
+ vector<*int*> name(a.begin(),a.begin() + 3) //将 **a** **向量中从第零个到第二个作为向量naem的初始值**
+ vector<*double*> name;
+```
+```C
+int n[] = {1, 2, 3, 4, 5};
+vector<int> a(n, n+5);    //将数组n的前5个元素作为向量a的初值
+vector<int> a(&n[1], &n[4]);    //将n[1] - n[4]范围内的元素作为向量a的初值
+```
 
 上面的定义相当于是一个数组name[SIZE],其长度可以根据需要来变化 
 
@@ -16,6 +25,11 @@
 > vector<*typename*> name[SIZE];
 
 如果*typename*也是STL容器的话，定义的时候要记得在 **>>** 之间加上空格
+
+> - **通过vector来实现二维数组**
+```C
+vector<vector<int>> a(10,vector<int>(5)); //**创建一个十行五列的int型二维数组** 
+```
   
 ## 2.容器内元素的访问
 ### 1.通过下标访问
