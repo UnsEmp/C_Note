@@ -1,4 +1,5 @@
 {
+    "terminal.integrated.shell.windows": "C:\\windows\\System32\\cmd.exe",
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
         "ratio": "cpp",
@@ -75,6 +76,18 @@
         "shared_mutex": "cpp",
         "thread": "cpp",
         "typeindex": "cpp",
-        "cerrno": "cpp"
+        "cerrno": "cpp",
+        "cassert": "c",
+        "ccomplex": "c",
+        "cfloat": "c",
+        "ciso646": "c",
+        "climits": "c",
+        "cstdalign": "c",
+        "ctgmath": "c",
+        "filesystem": "c",
+        "ios": "c",
+        "locale": "c",
+        "queue": "c",
+        "stack": "c"
     }
 }

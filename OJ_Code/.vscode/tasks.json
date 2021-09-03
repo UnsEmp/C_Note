@@ -5,6 +5,9 @@
             "type": "shell",
             "label": "g++.exe build active file",
             "command": "D:\\MinGW-w64\\bin\\g++.exe",
+            "presentation": {
+                "focus": true
+            },
             "args": [
                 "-g",
                 "${file}",
