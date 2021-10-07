@@ -1,52 +1,23 @@
-#include <stdio.h>
-#include <string.h>
+#include <bits/stdc++.h>
+using namespace std;
 
-int Cac(int a,int b,char ch)
-{
-	int temp;
-	switch(ch){
-		case '+':temp = a + b;break;
-		case '-':temp = a - b;break;
-		case '*':temp = a * b;break;
-		case '/':temp = a / b;break;
+int main() {
+	int n;
+	cin >> n;
+	vector<vector<int>> arr(n, vector<int>(2));
+	for(int i = 0;i < n;i++) {
+		cin >> arr[i][0] >> arr[i][1];
 	}
-    return temp;
-}
-
-int main()
-{
-	printf("输入数\n");
-	printf("例如13*8\n");
-	int a,b,temp,sum = 0;
-	bool flag = true;
-	char ch;
-	char arr[10];
-	gets(arr);
-	while(strcmp(arr,"exit") != 0){
-		for(int i = 0;i < strlen(arr);i++){
-			if(arr[i] >= 48 && arr[i] <= 57){
-				temp = (arr[i] - '0');
-				sum = (sum * 10) + temp;
-			}
-			else if(arr[i] == ' '){
-				flag = false;
+	int count = 0;
+	for(int i = 0;i < n;i++) {
+		for(int j = 0;j < n;j++) {
+          if(j == i) continue;
+			if(arr[j][0] < arr[i][0] && arr[i][1] < arr[j][1]) {
+				count++;
 				break;
 			}
-			else{
-				ch = arr[i];
-				a = sum;
-				sum = 0;
-			}
 		}
-		b = sum;
-		sum = 0;
-		if(flag){
-			printf("%d%c%d=%d\n",a,ch,b,Cac(a,b,ch));
-		}
-		else{
-			printf("输入错误\n");
-		}
-		gets(arr);
 	}
+	cout << count << endl;
 	return 0;
 }

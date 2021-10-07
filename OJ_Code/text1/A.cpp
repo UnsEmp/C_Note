@@ -1,66 +1,55 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#define error -1
 
-class Solution {
-public:
-    int search(vector<int>& nums, int target) {
-        return BinarySearch(nums, target);
-    }
-    int BinarySearch(vector<int> & nums, int x) {
-        int left = 0, right = nums.size() - 1;
-        while(left <= right) {
-            int mid = left - (left - right) / 2;
-            if(nums[mid] > x) right = mid;
-            else if(nums[mid] < x) left = mid + 1;
-            else return mid;
-        }
-        return -1;
-    }
+typedef int ElementType;
+typedef struct SNode* PtrToSNode;
+struct SNode {
+    ElementType Data;
+    PtrToSNode next;
 };
+typedef PtrToSNode Stack;
 
-void trimLeftTrailingSpaces(string &input) {
-    input.erase(input.begin(), find_if(input.begin(), input.end(), [](int ch) {
-        return !isspace(ch);
-    }));
-}
-
-void trimRightTrailingSpaces(string &input) {
-    input.erase(find_if(input.rbegin(), input.rend(), [](int ch) {
-        return !isspace(ch);
-    }).base(), input.end());
-}
-
-vector<int> stringToIntegerVector(string input) {
-    vector<int> output;
-    trimLeftTrailingSpaces(input);
-    trimRightTrailingSpaces(input);
-    input = input.substr(1, input.length() - 2);
-    stringstream ss;
-    ss.str(input);
-    string item;
-    char delim = ',';
-    while (getline(ss, item, delim)) {
-        output.push_back(stoi(item));
-    }
-    return output;
-}
-
-int stringToInteger(string input) {
-    return stoi(input);
-}
+Stack CreatStack();//创建一个链式堆栈
+bool IsEmpty(Stack S); //判断堆栈空不空
+bool Push(Stack S, ElementType x);//将元素压入堆栈中
+ElementType Pop(Stack S);//删除栈顶的元素，并返回值
 
 int main() {
-    // cout << stoi("12");
-    string line;
-    while (getline(cin, line)) {
-        vector<int> nums = stringToIntegerVector(line);
-        getline(cin, line);
-        int target = stringToInteger(line);
-        
-        int ret = Solution().search(nums, target);
-
-        string out = to_string(ret);
-        cout << out << endl;
-    }
     return 0;
+}
+
+Stack CreatStack() //创建一个链式堆栈
+{
+    Stack S;
+    S = (Stack)malloc(sizeof(struct SNode));
+    S->next = NULL;
+    return S;
+}
+bool IsEmpty(Stack S) //判断堆栈空不空
+{
+    return S->next == NULL;
+}
+bool Push(Stack S, ElementType x) //将元素压入堆栈中
+{
+    PtrToSNode tmp;
+    tmp = (Stack)malloc(sizeof(struct SNode));
+    tmp->Data = x;
+    tmp->next = S->next;
+    S->next = tmp;
+    return true;
+}
+ElementType Pop(Stack S) //删除栈顶的元素，并返回值
+{
+    PtrToSNode tmp;
+    ElementType topelment;
+    if(IsEmpty(S)) return error;
+    else {
+        tmp = S->next;
+        topelment = tmp->Data;
+        S->next = tmp->next;
+        free(tmp);
+        return topelment;
+    }
 }

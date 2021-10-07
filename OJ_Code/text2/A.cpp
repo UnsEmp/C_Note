@@ -1,85 +1,84 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
 
-class Solution {
-public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-        int i, j;
-        int n = nums.size();
-        for(i = 0;i < n;i++) {
-            for(j = i + 1;j < n;j++) {
-                if(nums[i] + nums[j] == target)
-                    break;
-            }
-            if(nums[i] + nums[j] == target)
-                    break;
-        }
-        vector<int> ans;
-        ans.push_back(i);
-        ans.push_back(j);
-        return ans;
-    }
+typedef int ElementType;
+typedef struct LNode* Polynomial;
+
+struct LNode {
+	int coef;
+	int expon;
+	struct LNode* next;
 };
 
-void trimLeftTrailingSpaces(string &input) {
-    input.erase(input.begin(), find_if(input.begin(), input.end(), [](int ch) {
-        return !isspace(ch);
-    }));
-}
-
-void trimRightTrailingSpaces(string &input) {
-    input.erase(find_if(input.rbegin(), input.rend(), [](int ch) {
-        return !isspace(ch);
-    }).base(), input.end());
-}
-
-vector<int> stringToIntegerVector(string input) {
-    vector<int> output;
-    trimLeftTrailingSpaces(input);
-    trimRightTrailingSpaces(input);
-    input = input.substr(1, input.length() - 2);
-    stringstream ss;
-    ss.str(input);
-    string item;
-    char delim = ',';
-    while (getline(ss, item, delim)) {
-        output.push_back(stoi(item));
-    }
-    return output;
-}
-
-int stringToInteger(string input) {
-    return stoi(input);
-}
-
-string integerVectorToString(vector<int> list, int length = -1) {
-    if (length == -1) {
-        length = list.size();
-    }
-
-    if (length == 0) {
-        return "[]";
-    }
-
-    string result;
-    for(int index = 0; index < length; index++) {
-        int number = list[index];
-        result += to_string(number) + ", ";
-    }
-    return "[" + result.substr(0, result.length() - 2) + "]";
-}
+Polynomial ReadPolynomial();
+void PrintPolynomial(Polynomial p);
+void Attach(int coef, int expon, Polynomial *p);
+Polynomial AddPolynomial(Polynomial p1, Polynomial p2);
 
 int main() {
-    string line;
-    while (getline(cin, line)) {
-        vector<int> nums = stringToIntegerVector(line);
-        getline(cin, line);
-        int target = stringToInteger(line);
-        
-        vector<int> ret = Solution().twoSum(nums, target);
+	Polynomial p, p1, p2;
+	p1 = ReadPolynomial();
+	p2 = ReadPolynomial();
+	p = AddPolynomial(p1, p2);
+	PrintPolynomial(p);
+	return 0;
+}
 
-        string out = integerVectorToString(ret);
-        cout << out << endl;
+Polynomial AddPolynomial(Polynomial p1, Polynomial p2) {
+	int sum;
+    Polynomial pa,front,rear,temp;
+    pa = (Polynomial)malloc(sizeof(struct LNode));
+    pa->next = NULL; 
+    rear = pa;
+    while(p1 && p2){
+        if(p1->expon > p2->expon){
+            Attach(p1->coef,p1->expon,&rear);
+            p1 = p1->next;
+        }
+        else if(p1->expon < p2->expon){
+            Attach(p2->coef,p2->expon,&rear);
+            p2 = p2->next;
+        }
+        else{
+            if((p1->coef + p2->coef) != 0){
+                sum = p1->coef + p2->coef;
+                Attach(sum,p1->expon,&rear);
+            }
+            p1 = p1->next;
+            p2 = p2->next;
+        }
     }
-    return 0;
+    for(;p1;p1 = p1->next)Attach(p1->coef,p1->expon,&rear); 
+    for(;p2;p2 = p2->next)Attach(p2->coef,p2->expon,&rear);
+    temp = pa;
+    pa = pa->next;
+    free(temp);
+    return pa;
+}
+void Attach(int coef, int expon, Polynomial *p) {
+	Polynomial tmp = (Polynomial)malloc(sizeof(struct LNode));
+	tmp->coef = coef;
+	tmp->expon = expon;
+	tmp->next = NULL;
+	(*p)->next = tmp;
+	(*p) = tmp;
+}
+Polynomial ReadPolynomial() {
+	Polynomial head, p, p1;
+	head = p = (Polynomial)malloc(sizeof(struct LNode));
+	p->next = NULL;
+	int n, coef, expon;
+	scanf("%d", &n);
+	while(n--) {
+		scanf("%d %d", &coef, &expon);
+		Attach(coef, expon, &p);
+	}
+	return head->next;
+}
+void PrintPolynomial(Polynomial p) {
+	while(p) {
+		printf("%d %d ", p->coef, p->expon);
+		p = p->next;
+	}
 }
