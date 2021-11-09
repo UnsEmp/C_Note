@@ -1,11 +1,21 @@
 {
-    "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
+        "cstdlib": "cpp",
+        "iostream": "cpp",
+        "windows.h": "c",
+        "*.tcc": "cpp",
+        "system_error": "cpp",
+        "random": "cpp",
+        "fstream": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "new": "cpp",
+        "ostream": "cpp",
         "ratio": "cpp",
-        "random": "c",
-        "sstream": "c",
-        "regex": "c",
-        "string_view": "cpp",
-        "iostream": "cpp"
-    }
+        "stdexcept": "cpp",
+        "streambuf": "cpp",
+        "functional": "cpp",
+        "regex": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }
