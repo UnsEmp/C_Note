@@ -1,1 +1,1 @@
-This is some code that I wrote.
+This is my AC code on some OJ platform， for example codeforces, leetcode, PTA, luogu。

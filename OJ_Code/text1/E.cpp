@@ -1,20 +1,31 @@
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-	string s;
-	cin >> s;
-	int count = 0, row = 0, col = 0;
-	for(int i = 0;i < s.size();i++) {
-		// if(i % 20 == 0) cout << endl;
-		if(s[i] == '1' || s[i] == '0') {
-			cout << s[i] << " ";
-			count++;
-			if(count % 3 == 0) {
-				row++;
-				cout << endl;
+#include<stdio.h>
+int main()
+{
+	char input, blank = ' ';
+	int num_letter = 0;
+	int flag=0;
+	
+	while((input = getchar()) != '.'){
+		if(input != ' '){
+			num_letter++;
+		}
+		else if(num_letter != 0){
+			if(flag != 0){
+				putchar(blank);
 			}
+			flag = 1;
+			printf("%d",num_letter);
+			num_letter = 0; 
+		}
+		else{
+			continue;
 		}
 	}
-	cout << row << " " << count / row << endl;
+	if(flag == 1&&num_letter != 0){
+		putchar(blank);
+	}
+	if(num_letter){
+		printf("%d",num_letter);
+	}
 	return 0;
-}
+ }

@@ -1,6 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
+#include <cstdio>
+#include <cstdlib>
+#include <cstdbool>
 
 typedef int Position;
 typedef struct QNode* Queue;

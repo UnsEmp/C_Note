@@ -19,7 +19,7 @@ struct TNode
     BinTree right; //指向右子树
 };
 
-void RecursionInOrderTraversal(BinTree BT);
+void RecursionInorderTraversal(BinTree BT);
 void PreOrderTraversal(BinTree BT);
 void InOrderTraversal(BinTree BT);
 void PostOrderTraversal(BinTree BT);
@@ -35,7 +35,7 @@ int main()
 }
 
 
-void RecursionInOrderTraversal(BinTree BT)
+void RecursionInorderTraversal(BinTree BT)
 {
     
 }
