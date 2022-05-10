@@ -1,14 +1,60 @@
-#include <stdio.h>
+#include <bits/stdc++.h>
+using namespace std;
+
+const int N = 1e4 + 10;
+class Solution {
+public:
+    vector<string> ans;
+    int son[N][26], idx = 0, n, cnt[N];
+    string res;
+    void insert(string s) {
+        int p = 0;
+        for(int i = 0;i < s.size();++i) {
+            int u = s[i] - 'a';
+            if(!son[p][u]) {
+                son[p][u] = ++idx;
+                p = idx;
+            }
+            else p = son[p][u];
+        }
+        cnt[p] ++;
+    }
+    void query(int idx, string s) {
+        cout << s << "\n";
+        if(idx == res.size()) {
+            ans.push_back(s);
+            return ;
+        }
+        int p = 0;
+        for(int i = idx;i < res.size();++i) {
+            int u = res[i] - 'a';
+            if(son[p][u]) {
+                s += res[i];
+                p = son[p][u];
+                if(cnt[p]) query(i + 1, s + " ");
+            }
+            else {
+                return ;
+            }
+        }
+    }
+    vector<string> wordBreak(string s, vector<string>& wordDict) {
+        n = wordDict.size();
+        res = s;
+        memset(son, 0, sizeof son);
+        memset(cnt, 0, sizeof cnt);
+        for(int i = 0;i < n;++i) insert(wordDict[i]);
+        query(0, "");
+        return ans;
+    }
+};
 
 int main() {
-    int a = 3,b = 4,c = 5;
-    double x = 1.2, y = 2.4, z = -3.6;
-    unsigned u = 51274,n = 128765;
-    char c1 = 'a', c2 = 'b';
-    printf("a= %d  b = %d  c= %d\n",a,b,c);
-    printf("x=%lf, y=%lf, z=%lf\n",x,y,z);
-    printf("x+y= %.2lf  y+z=%.2lf  z+x=%.2lf\n",x+y,y+z,z+x);
-    printf("u= %i  n=%i\n",u,n);
-    printf("c1=%c or %d(ASCII)\n",c1,c1);
+    string s = "bb";
+    vector<string> arr = {"a","b","bbb","bbbb"};
+    Solution so;
+    auto t = so.wordBreak(s, arr);
+    for(int i = 0;i < t.size();++i) cout << t[i] << " ";
+    cout << "\n";
     return 0;
 }

@@ -1,0 +1,1 @@
+{"name":"Local: Regular_bracket_sequence","url":"d:\\visual_stdio_code\\codeforces\\Regular_bracket_sequence.cpp","tests":[{"id":1647511847297,"input":"5\n????\n?)?(\n(??)\n??()\n)?(?","output":"YES\nNO\nYES\nYES\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\visual_stdio_code\\codeforces\\Regular_bracket_sequence.cpp","group":"local","local":true}

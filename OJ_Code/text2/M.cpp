@@ -1,9 +1,18 @@
-#include <stdio.h>
+#include <bits/stdc++.h>
+using namespace std;
+
 int main() {
-    int n, tmp;
-    scanf("%d %d", &n, &tmp);
-    if(n == 1) printf("%d\n",tmp);
-    else if(n == 2) printf("%lf",(double)tmp);
-    else printf("%c", (char)tmp);
-    return 0;
+    int _;
+    cin >> _;
+    while(_--) {
+        int n, sum = 0;
+        cin >> n;
+        for(int i = 0;i < n;i++) {
+            int tmp;
+            cin >> tmp;
+            sum = (sum + tmp) % n;
+        }
+        if(sum) cout << 1 << endl;
+        else cout << 0 << endl;
+    }
 }
