@@ -1,1 +1,0 @@
-{"name":"Local: C","url":"d:\\visual_stdio_code\\codeforces\\div3787\\C.cpp","tests":[{"id":1651847094534,"input":"8\n0\n1\n1110000\n?????\n1?1??0?0\n0?0???\n??11\n??0??\n","output":"1\n1\n2\n5\n4\n1\n1\n3\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\visual_stdio_code\\codeforces\\div3787\\C.cpp","group":"local","local":true}
