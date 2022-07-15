@@ -1,0 +1,1 @@
+{"name":"Local: B","url":"d:\\visual_stdio_code\\codeforces\\ECR129\\B.cpp","tests":[{"id":1653317594906,"input":"3\n2\n1 2\n3\n1 1 1\n4\n3 1 4 2\n2\n3 1\n5\n2 1 5 4 3\n5\n3 2 1 2 1\n","output":"2\n3\n3\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\visual_stdio_code\\codeforces\\ECR129\\B.cpp","group":"local","local":true}

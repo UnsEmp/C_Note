@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\visual_stdio_code\\codeforces\\div2793\\A.cpp","tests":[{"id":1653230562114,"input":"3\n3\naba\n8\nacaaaaca\n2\ndd\n","output":"1\n4\n2\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\visual_stdio_code\\codeforces\\div2793\\A.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: H1","url":"d:\\visual_stdio_code\\codeforces\\div4790\\H1.cpp","tests":[{"id":1652272359957,"input":"4\n7\n4 1 4 6 7 7 5\n2\n2 1\n1\n1\n3\n2 2 2","output":"6\n1\n0\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\visual_stdio_code\\codeforces\\div4790\\H1.cpp","group":"local","local":true}

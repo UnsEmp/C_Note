@@ -1,0 +1,1 @@
+{"name":"Local: C","url":"d:\\visual_stdio_code\\PTA\\2022520PTA\\C.cpp","tests":[{"id":1653055728394,"input":"1 20 25 160 175\n6\n0 28 165\n1 21 170\n0 25 160\n0 22 180\n1 20 175\n0 20 175\n","output":"0 25 160\n0 20 175\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\visual_stdio_code\\PTA\\2022520PTA\\C.cpp","group":"local","local":true}

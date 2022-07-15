@@ -1,10 +1,36 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int main(){
-	
-	vector<int> arr(4);
-	for(int i = 0;i < 4;++i) cin >> arr[i];
-	sort(arr.begin(), arr.end());
-	for(int i = 0;i < 4;++i) cout << arr[i] << " "; 
-	return 0;
+const int N = 1e5 + 10;
+int a[N];
+int cnt = 0;
+
+void insert(int x) {
+	a[cnt++] = x;
+}
+
+void up(int p) {
+	while(p / 2 && a[p / 2] > a[p]) {
+		swap(a[p / 2], a[p]);
+		up(p / 2);
+	}
+}
+
+void down(int p) {
+	while(p * 2)
+}
+
+int pop() {
+
+}
+
+int main() {
+	int n;
+	cin >> n;
+	// vector<int> a(n + 1);
+	for(int i = 1;i <= n;++i) {
+		int t;
+		cin >> t;
+		insert(x);
+		up(i);
+	}	
 }

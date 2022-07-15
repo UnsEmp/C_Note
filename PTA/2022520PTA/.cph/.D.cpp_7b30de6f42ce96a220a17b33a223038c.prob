@@ -1,0 +1,1 @@
+{"name":"Local: D","url":"d:\\visual_stdio_code\\PTA\\2022520PTA\\D.cpp","tests":[{"id":1653056190507,"input":"27 500\n","output":"11 55 495\n"},{"id":1653056226405,"input":"27 50\n","output":"No solution in (3, 50].\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\visual_stdio_code\\PTA\\2022520PTA\\D.cpp","group":"local","local":true}

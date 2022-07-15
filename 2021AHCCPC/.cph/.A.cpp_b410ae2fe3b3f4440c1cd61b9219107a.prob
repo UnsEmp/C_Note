@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\visual_stdio_code\\2021AHCCPC\\A.cpp","tests":[{"id":1654936600987,"input":"3\n4\n2 1 1\n6\n0 4 2\n100\n61 24 15","output":"1\n2\n22"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\visual_stdio_code\\2021AHCCPC\\A.cpp","group":"local","local":true}

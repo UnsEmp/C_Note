@@ -1,0 +1,1 @@
+{"name":"Local: C","url":"d:\\visual_stdio_code\\codeforces\\div792\\C.cpp","tests":[{"id":1652976699210,"input":"5\n2 3\n1 2 3\n1 1 1\n2 2\n4 1\n2 3\n2 2\n2 1\n1 1\n2 3\n6 2 1\n5 4 3\n2 1\n1\n2","output":"1 1\n-1\n1 2\n1 3\n1 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\visual_stdio_code\\codeforces\\div792\\C.cpp","group":"local","local":true}
