@@ -1,0 +1,1 @@
+{"name":"Local: 1002","url":"d:\\visual_stdio_code\\ACM_Primary\\2022CCPC\\1002.cpp","tests":[{"id":1659189556962,"input":"2\n3 3\n1 2 1 1\n2 3 1 1\n1 3 2 0\n3 3\n1 2 1 1\n2 3 1 1\n1 3 1 0","output":"2 2\n1 0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\visual_stdio_code\\ACM_Primary\\2022CCPC\\1002.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: ExpressionCalculation","url":"d:\\visual_stdio_code\\Acwing\\AlgorithmAdvance\\note2\\ExpressionCalculation.cpp","tests":[{"id":1658648697315,"input":"(2+2)^(1+1)","output":"16"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\visual_stdio_code\\Acwing\\AlgorithmAdvance\\note2\\ExpressionCalculation.cpp","group":"local","local":true}

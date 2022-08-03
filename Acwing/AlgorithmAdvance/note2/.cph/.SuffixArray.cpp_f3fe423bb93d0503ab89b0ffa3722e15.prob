@@ -1,0 +1,1 @@
+{"name":"Local: SuffixArray","url":"d:\\visual_stdio_code\\Acwing\\AlgorithmAdvance\\note2\\SuffixArray.cpp","tests":[{"id":1657861694123,"input":"ponoiiipoi","output":"9 4 5 6 2 8 3 1 7 0\n0 1 2 1 0 0 2 1 0 2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\visual_stdio_code\\Acwing\\AlgorithmAdvance\\note2\\SuffixArray.cpp","group":"local","local":true}

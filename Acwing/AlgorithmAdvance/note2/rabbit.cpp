@@ -37,7 +37,7 @@ int main() {
         int a, b, c, d;
         cin >> a >> b >> c >> d;
         if(st.val(a, b) == st.val(c, d)) cout << "Yes" << "\n";
-        else cout << "No" << "\n";
+        else cout << "No" << "\n"; 
     }
     return 0;
 }
