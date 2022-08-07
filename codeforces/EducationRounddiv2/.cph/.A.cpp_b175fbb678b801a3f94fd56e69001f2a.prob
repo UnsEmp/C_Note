@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\visual_stdio_code\\codeforces\\EducationRounddiv2\\A.cpp","tests":[{"id":1659624014969,"input":"4\n1\n3\n4\n12\n","output":"2\n1\n2\n4\n"},{"id":1659624293974,"input":"1\n6","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\visual_stdio_code\\codeforces\\EducationRounddiv2\\A.cpp","group":"local","local":true}

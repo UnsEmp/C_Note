@@ -1,0 +1,1 @@
+{"name":"Local: KShortCircuit","url":"d:\\visual_stdio_code\\Acwing\\AlgorithmAdvance\\note3\\KShortCircuit.cpp","tests":[{"id":1659764570788,"input":"2 2\n1 2 5\n2 1 4\n1 2 2","output":"14"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\visual_stdio_code\\Acwing\\AlgorithmAdvance\\note3\\KShortCircuit.cpp","group":"local","local":true}
